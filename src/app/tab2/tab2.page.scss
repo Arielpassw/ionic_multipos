@@ -1,0 +1,59 @@
+// Contenedor principal de la página
+ioncontent {
+    --background: #fdfdfd; // Un fondo claro y limpio
+}
+
+// Estilo para el contenedor de tu nombre
+.name-container {
+    background: linear-gradient(135deg, #3880ff, #2fdf75); // Degradado con los colores de Ionic
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+    text-align: center;
+
+    h2 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+}
+
+// Estilo para el botón
+ion-button {
+    --border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    height: 48px;
+    box-shadow: 0 4px 10px rgba(47, 223, 117, 0.3); // Sombra sutil del color del botón
+}
+
+// Estilo para la lista de números primos
+ion-list {
+    background: transparent;
+    margin-top: 24px;
+    padding: 0;
+
+    ion-item {
+        --background: #ffffff;
+        --border-radius: 12px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        --padding-start: 16px;
+        --inner-padding-end: 16px;
+
+        ion-label {
+            font-size: 1rem;
+            color: #4a4a4a;
+
+            strong {
+                color: #3880ff; // Resalta el número primo en azul
+                font-size: 1.2rem;
+                float: right; // Envía el número al extremo derecho para ordenarlo
+            }
+        }
+    }
+}

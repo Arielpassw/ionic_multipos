@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Números primos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Números primos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenedor con el nuevo diseño para tu nombre -->
+  <div class="name-container">
+    <h2>Desarrollado por: ARIAS TOASA ARIEL ALEXANDER</h2>
+  </div>
+
+  <!-- Botón de acción -->
+  <ion-button color="success" expand="block" (click)="mostrarPrimos()">
+    Generar Números Primos
+  </ion-button>
+
+  <!-- Lista de números primos -->
+  <ion-list *ngIf="primos.length > 0">
+    <ion-item *ngFor="let primo of primos">
+      <ion-label>Número Primo: <strong>{{ primo }}</strong></ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

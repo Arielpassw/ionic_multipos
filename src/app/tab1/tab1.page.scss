@@ -1,0 +1,42 @@
+.Contadores {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.Contadores h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.Contadores h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f1f1f1;
+}
+
+ion-button {
+  width: 100%;
+  margin-top: 12px;
+  --border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+ion-content {
+  --background: #f5f6fa;
+}
+
+ion-toolbar {
+  --background: #3880ff;
+  --color: white;
+}
+
+ion-title {
+  font-weight: bold;
+}

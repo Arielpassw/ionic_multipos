@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Contadores 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div class="Contadores">
+        <h2>Valor Actual</h2>
+        <h1>{{ contador1 }}</h1>
+        <h1>{{ contador2 }}</h1>
+        <h1>{{ contador3 }}</h1>
+        <h1>{{ contador4 }}</h1>
+        <h1>{{ contador5 }}</h1>
+
+      <ion-button 
+        (click)= "aumentar1()"> +Aumentar en multipos de 2
+      </ion-button>
+
+      <ion-button 
+        (click)= "aumentar2()"> +Aumentar en multipos de 3
+      </ion-button>
+
+      <ion-button 
+        (click)= "aumentar3()"> +Aumentar en multipos de 5
+      </ion-button>
+
+      <ion-button 
+        (click)= "aumentar4()"> +Aumentar en multipos de 7
+      </ion-button>
+
+      <ion-button 
+        (click)= "aumentar5()"> +Aumentar en multipos de 10
+      </ion-button>
+
+      <ion-button
+          expand="block"
+          color="danger"
+          (click)="reiniciar()"> Reiniciar contadores
+      </ion-button>
+
+    </div>
+</ion-content>
