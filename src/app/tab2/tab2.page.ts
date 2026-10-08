@@ -1,32 +1,66 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent,IonButton } from '@ionic/angular';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+
+import {
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+  IonButton
+} from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent,IonButton]
+  imports: [
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent,
+    IonButton
+  ]
 })
 export class Tab2Page {
 
-  // Nombre 
-  nombre: string = "Ariel Arias";
+  contador: number = 0;
+  primoActual: number = 2;
 
-  // Arreglo
-  primos: number[] = [];
+  siguientePrimo() {
+    let numero = this.primoActual + 1;
 
-  constructor() {}
+    while (!this.esPrimo(numero)) {
+      numero++;
+    }
 
-  // Mostras numeros primos
-  mostrarPrimos(): void {
-    this.primos = [];
-    // Generamos números primos del 2 al 100
-    for (let i = 2; i <= 100; i++) {
-      if (this.esPrimo(i)) {
-        this.primos.push(i);
+    this.primoActual = numero;
+    this.contador++;
+  }
+
+  esPrimo(numero: number): boolean {
+    if (numero < 2) {
+      return false;
+    }
+
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+      if (numero % i === 0) {
+        return false;
       }
     }
+
+    return true;
   }
 
+  reiniciar() {
+    this.contador = 0;
+    this.primoActual = 2;
   }
+
+}

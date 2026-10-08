@@ -1,32 +1,45 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-title>
-      Números primos
+      Números Primos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Números primos</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
 
-  <!-- Contenedor con el nuevo diseño para tu nombre -->
-  <div class="name-container">
-    <h2>Desarrollado por: ARIAS TOASA ARIEL ALEXANDER</h2>
+  <div class="presentacion">
+    <h2>Contador de Números Primos</h2>
+    <p>Estudiante: <strong>Ariel Arias</strong></p>
   </div>
 
-  <!-- Botón de acción -->
-  <ion-button color="success" expand="block" (click)="mostrarPrimos()">
-    Generar Números Primos
-  </ion-button>
+  <ion-card color="primary">
+    <ion-card-header>
+      <ion-card-title>Contador</ion-card-title>
+    </ion-card-header>
 
-  <!-- Lista de números primos -->
-  <ion-list *ngIf="primos.length > 0">
-    <ion-item *ngFor="let primo of primos">
-      <ion-label>Número Primo: <strong>{{ primo }}</strong></ion-label>
-    </ion-item>
-  </ion-list>
+    <ion-card-content class="contador">
+      <h1>{{ primoActual }}</h1>
+
+      <p>
+        Números primos contados:
+        <strong>{{ contador }}</strong>
+      </p>
+
+      <ion-button
+        expand="block"
+        color="light"
+        (click)="siguientePrimo()">
+        Número primo
+      </ion-button>
+
+      <ion-button
+        expand="block"
+        color="medium"
+        (click)="reiniciar()">
+        Reiniciar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

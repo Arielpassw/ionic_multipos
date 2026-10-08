@@ -1,59 +1,137 @@
-// Contenedor principal de la página
-ioncontent {
-    --background: #fdfdfd; // Un fondo claro y limpio
+/* ==========================================
+   HEADER Y TOOLBAR
+   ========================================== */
+ion-header ion-toolbar {
+  --background: #293d68;
+  --color: #ffffff;
+  --border-style: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-// Estilo para el contenedor de tu nombre
-.name-container {
-    background: linear-gradient(135deg, #3880ff, #2fdf75); // Degradado con los colores de Ionic
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    margin-bottom: 24px;
-    text-align: center;
-
-    h2 {
-        margin: 0;
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: #ffffff;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-    }
+ion-header ion-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-// Estilo para el botón
-ion-button {
-    --border-radius: 12px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    height: 48px;
-    box-shadow: 0 4px 10px rgba(47, 223, 117, 0.3); // Sombra sutil del color del botón
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+   ========================================== */
+ion-content {
+  --background: #f4f6f9;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
 }
 
-// Estilo para la lista de números primos
-ion-list {
-    background: transparent;
-    margin-top: 24px;
-    padding: 0;
+/* ==========================================
+   SECCIÓN DE PRESENTACIÓN
+   ========================================== */
+.presentacion {
+  max-width: 600px;
+  margin: 16px auto 24px auto;
+  padding: 0 16px;
+  text-align: center;
+}
 
-    ion-item {
-        --background: #ffffff;
-        --border-radius: 12px;
-        margin-bottom: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        --padding-start: 16px;
-        --inner-padding-end: 16px;
+.presentacion h2 {
+  color: #293d68;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
 
-        ion-label {
-            font-size: 1rem;
-            color: #4a4a4a;
+.presentacion p {
+  color: #4a5568;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
 
-            strong {
-                color: #3880ff; // Resalta el número primo en azul
-                font-size: 1.2rem;
-                float: right; // Envía el número al extremo derecho para ordenarlo
-            }
-        }
-    }
+.presentacion strong {
+  color: #6258bc;
+  font-weight: 600;
+}
+
+/* ==========================================
+   TARJETA CONTENEDORA (ION-CARD)
+   ========================================== */
+ion-card {
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(41, 61, 104, 0.10);
+  overflow: hidden;
+}
+
+ion-card ion-card-header {
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 16px;
+}
+
+ion-card ion-card-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #293d68;
+}
+
+/* ==========================================
+   BLOQUE DEL CONTADOR Y BOTONES
+   ========================================== */
+.contador {
+  text-align: center;
+  padding: 24px 20px;
+}
+
+/* Caja de fondo para asegurar legibilidad del número blanco */
+.contador .numero-box {
+  background: linear-gradient(135deg, #6258bc 0%, #4a3f9a 100%);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 12px 0 20px 0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contador .numero-box h1 {
+  font-size: 64px;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contador p {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de botones */
+.contador .acciones {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contador ion-button {
+  margin: 0;
+  --border-radius: 12px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.contador ion-button.btn-principal {
+  --background: #6258bc;
+  --background-activated: #4a3f9a;
 }
